@@ -36,9 +36,9 @@ solution:
       device: NXP::K32L3A60VPJ1A:cm4
 
   build-types:
-    - type: Debug
-      optimize: none
-      debug: on
+    # - type: Debug
+    #   optimize: none
+    #   debug: on
 
     - type: Release
       optimize: balanced
