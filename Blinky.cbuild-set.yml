@@ -1,4 +1,0 @@
-cbuild-set:
-  generated-by: csolution version 2.10.0+p10-g332d53da
-  contexts:
-    - context: FRDM-K32L3A6.Debug+FRDM-K32L3A6
