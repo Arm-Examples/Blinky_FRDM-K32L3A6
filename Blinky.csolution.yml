@@ -9,10 +9,12 @@ solution:
         - -Wno-macro-redefined
         - -Wno-pragma-pack
         - -Wno-parentheses-equality
+        - -gdwarf-5
       C:
         - -std=gnu11
       ASM:
         - -masm=auto
+        - -gdwarf-5
       Link:
         - --entry=Reset_Handler
         - --info summarysizes
@@ -34,6 +36,10 @@ solution:
     - type: FRDM-K32L3A6
       board: NXP::FRDM-K32L3A6
       device: NXP::K32L3A60VPJ1A:cm4
+      target-set:
+        - set: 
+          debugger:
+            name: CMSIS-DAP
 
   build-types:
     - type: Debug
