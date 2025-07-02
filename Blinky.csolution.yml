@@ -1,5 +1,5 @@
 solution:
-  created-for: cmsis-toolbox@2.1.0
+  created-for: cmsis-toolbox@2.10.0
   description: Simple blinky example for FRDM-K32L3A6.
   compiler: AC6
 
@@ -21,14 +21,14 @@ solution:
         - --diag_suppress 6848
 
   packs:
-    - pack: ARM::CMSIS@6.0.0
+    - pack: ARM::CMSIS
     - pack: ARM::CMSIS-Compiler
     - pack: ARM::CMSIS-RTX
     - pack: ARM::CMSIS-View
 
     # packs for FRDM-K32L3A6
-    - pack: NXP::K32L3A60_DFP@18.0.0
-    - pack: NXP::FRDM-K32L3A6_BSP@18.0.0
+    - pack: NXP::K32L3A60_DFP
+    - pack: NXP::FRDM-K32L3A6_BSP
 
   target-types:
     - type: FRDM-K32L3A6

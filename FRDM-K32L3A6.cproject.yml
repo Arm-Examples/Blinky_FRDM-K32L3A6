@@ -5,11 +5,11 @@ project:
 
   misc:
     - Link:
-      - '--diag_suppress 6314'
+        - '--diag_suppress 6314'
 
   groups:
     - group: Documentation
-      files: 
+      files:
         - file: ./README.md
     - group: App
       files:
@@ -81,3 +81,12 @@ project:
     - component: ARM::CMSIS-Compiler:STDERR:Custom
     - component: ARM::CMSIS-Compiler:STDOUT:Custom
     - component: ARM::CMSIS-Compiler:STDIN:Custom
+    - component: NXP::Device:SDK Utilities:debug console template config
+    - component: NXP::Device:SDK Utilities:str
+  packs:
+    - pack: ARM::CMSIS
+    - pack: ARM::CMSIS-Compiler
+    - pack: ARM::CMSIS-RTX
+    - pack: ARM::CMSIS-View
+    - pack: NXP::FRDM-K32L3A6_BSP
+    - pack: NXP::K32L3A60_DFP
