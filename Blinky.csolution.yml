@@ -37,9 +37,12 @@ solution:
       board: NXP::FRDM-K32L3A6
       device: NXP::K32L3A60VPJ1A:cm4
       target-set:
-        - set: 
+        - set:
           debugger:
-            name: CMSIS-DAP
+            name: CMSIS-DAP@pyOCD
+            port: 3333
+            protocol: swd
+            clock: 10000000
 
   build-types:
     - type: Debug
