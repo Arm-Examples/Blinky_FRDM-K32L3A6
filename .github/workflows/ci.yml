@@ -2,7 +2,7 @@
 # Copyright (C) 2020-2024 Arm Limited or its affiliates and Contributors. All rights reserved.
 # SPDX-License-Identifier: Apache-2.0
 #
-name: Publishable
+name: Publishing
 
 concurrency:
   group: ${{ github.repository }}-${{ github.workflow }}-${{ inputs.branch || github.head_ref || github.ref }}
@@ -15,6 +15,7 @@ on:
       - '**'
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   publish-project-action:
@@ -26,7 +27,7 @@ jobs:
         name: Publish Project Action
         with:
           branch: ${{ github.branch || github.ref }}
-          project-file: ./Blinky.csolution.yml
+          project-file: ./hello.csolution.yml
           dry-run: ${{ github.ref != 'refs/heads/main' }}
           PUBLISH_API_KEY: ${{ secrets.KEIL_API_TOKEN }}
           CMSIS_API_KEY: ${{ secrets.CMSIS_API_KEY }}
